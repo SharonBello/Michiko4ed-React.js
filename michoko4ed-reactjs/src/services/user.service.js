@@ -16,9 +16,7 @@ export const userService = {
     getUsers,
     getById,
     remove,
-    update,
-    changeScore,
-
+    update
 }
 
 window.userService = userService

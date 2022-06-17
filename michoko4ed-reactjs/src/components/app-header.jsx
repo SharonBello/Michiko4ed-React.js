@@ -5,7 +5,6 @@ import { Search } from './search.jsx'
 import { logout } from '../store/actions/user.actions.js'
 import { useSelector, useDispatch } from 'react-redux'
 import { ProfileMenu } from './profile-menu.jsx'
-import { NavCategories } from './nav-categories.jsx'
 import { SideMenu } from './side-menu.jsx'
 
 export const AppHeader = (props) => {
@@ -66,10 +65,6 @@ export const AppHeader = (props) => {
                         </div>
                     </li>
                 </ul>
-            </div>
-
-            <div className="bottom container">
-                <NavCategories />
             </div>
         </header>
     )

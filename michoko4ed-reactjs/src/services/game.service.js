@@ -34,7 +34,7 @@ async function query(loggedUser, typeOf) {
     }
 
     games = games.map(game => {
-        return { ...game, question: { ...game.question, imgUrl: questions.find(question => question._id === game.question._id)?.imgUrl[0] } }
+        return { ...game, question: { ...game.question } }
     })
 
     games = games.sort((a, b) => b.createdAt - a.createdAt)

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { setFilter, loadGigs } from '../store/actions/gig.actions.js'
+import { setFilter, loadQuestions } from '../store/actions/question.actions.js'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { AiOutlineSearch } from 'react-icons/ai'
@@ -15,7 +15,7 @@ export const Search = ({ loc }) => {
         filterBy = { ...filterBy, txt: searchTerm }
         dispatch(setFilter(filterBy))
         navigate('/categories')
-        dispatch(loadGigs())
+        dispatch(loadQuestions())
     }
 
     const handleChange = (ev) => {
