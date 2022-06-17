@@ -2,8 +2,7 @@ import { userService } from '../../services/user.service.js'
 
 
 const initialState = {
-    count: 10,
-    loggedInUser: userService.getLoggedinUser() || null,
+    loggedUser: userService.getLoggedUser() || null,
     users: [],
     watchedUser: null,
 }
@@ -12,10 +11,10 @@ export function userReducer(state = initialState, action) {
     var newState = state;
     switch (action.type) {
         case 'SET_LOGGED_USER':
-            newState = { ...state, loggedInUser: action.user }
+            newState = { ...state, loggedUser: action.user }
             break;
         case 'SET_USER':
-            newState = { ...state, loggedInUser: action.user }
+            newState = { ...state, loggedUser: action.user }
             break;
         case 'REMOVE_USER':
             newState = {

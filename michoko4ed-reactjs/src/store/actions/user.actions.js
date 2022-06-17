@@ -1,7 +1,6 @@
 import { userService } from "../../services/user.service.js";
 import { showErrorMsg } from '../../services/event-bus.service.js'
 
-
 export function loadUsers() {
     return async dispatch => {
         try {
@@ -42,14 +41,10 @@ export function login(credentials) {
     }
 }
 
-
-
 export function signup(credentials) {
-
     return async (dispatch) => {
         try {
             const user = await userService.signup(credentials)
-
             dispatch({
                 type: 'SET_USER',
                 user
@@ -57,12 +52,10 @@ export function signup(credentials) {
         } catch (err) {
             console.log('Cannot signup', err)
         }
-
     }
 }
 
 export function logout() {
-
     return async (dispatch) => {
         try {
             await userService.logout()
@@ -78,23 +71,19 @@ export function logout() {
 }
 
 export async function loadUser(userId) {
-
     try {
         const user = await userService.getById(userId);
         return user
-
     } catch (err) {
         showErrorMsg('Cannot load user')
         console.log('Cannot load user', err)
     }
-
 }
 
-export function getLoggedinUser() {
-
+export function getLoggedUser() {
     return async (dispatch) => {
         try {
-            const user = await userService.getLoggedinUser()
+            const user = await userService.getLoggedUser()
             dispatch({ type: 'SET_LOGGED_USER', user })
         } catch (err) {
             console.log('Cannot load user', err)
