@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { cloudinaryService } from '../services/cloudinary.service.js';
 import { NavLink } from 'react-router-dom';
-import { login, signup, getLoggedinUser } from '../store/actions/user.actions.js'
+import { login, signup, getLoggedUser } from '../store/actions/user.actions.js'
 
 const theme = createTheme();
 
@@ -50,12 +50,12 @@ export const LoginSignup = () => {
 
         if (isLogin) {
             dispatch(login(loginInfo))
-            dispatch(getLoggedinUser())
+            dispatch(getLoggedUser())
         } else {
             loginInfo.fullname = data.get('fullname')
             loginInfo.imgUrl = imgUrl
             dispatch(signup(loginInfo))
-            dispatch(getLoggedinUser())
+            dispatch(getLoggedUser())
         }
         navigate('/')
     }
