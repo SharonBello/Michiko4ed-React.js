@@ -1,0 +1,113 @@
+{
+    "id": "L104",
+    "user_id": "U101",
+    "title": "Geography",
+    "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
+    "game_id": "G101",
+    "questions": [
+        {
+            "id": "Q131",
+            "type": "boolean",
+            "question": "Greenland is covered with grass and Iceland covered with ice.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "id": "Q132",
+            "type": "multiple",
+            "question": "How many federal states does Germany have?",
+            "correct_answer": "16",
+            "incorrect_answers": [
+                "13",
+                "32",
+                "25"
+            ]
+        },
+        {
+            "id": "Q133",
+            "type": "multiple",
+            "question": "Which of the following European languages is classified as a &quot;language isolate?&quot;",
+            "correct_answer": "Basque",
+            "incorrect_answers": [
+                "Galician",
+                "Maltese",
+                "Hungarian"
+            ]
+        },
+        {
+            "id": "Q134",
+            "type": "boolean",
+            "question": "There is a city called Rome in every continent on Earth.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "id": "Q135",
+            "type": "boolean",
+            "question": "Ottawa is the capital of Canada.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "id": "Q136",
+            "type": "multiple",
+            "question": "What is the Capital of the United States?",
+            "correct_answer": "Washington, D.C.",
+            "incorrect_answers": [
+                "Los Angelas, CA",
+                "New York City, NY",
+                "Houston, TX"
+            ]
+        },
+        {
+            "id": "Q137",
+            "type": "boolean",
+            "question": "St. Louis is the capital of the US State Missouri.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "id": "Q138",
+            "type": "multiple",
+            "question": "What is the capital of India?",
+            "correct_answer": "New Delhi",
+            "incorrect_answers": [
+                "Bejing",
+                "Montreal",
+                "Tithi"
+            ]
+        },
+        {
+            "id": "Q139",
+            "type": "multiple",
+            "question": "Which ocean borders the west coast of the United States?",
+            "correct_answer": "Pacific",
+            "incorrect_answers": [
+                "Atlantic",
+                "Indian",
+                "Arctic"
+            ]
+        },
+        {
+            "id": "Q140",
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is Laos?",
+            "correct_answer": "Country",
+            "incorrect_answers": [
+                "Region",
+                "River",
+                "City"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "id": "L105",
+    "user_id": "U104",
+    "title": "History",
+    "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
+    "game_id": "G105",
+    "questions": [
+        {
+            "id": "Q141",
+            "type": "multiple",
+            "question": "Which German field marshal was known as the `Desert Fox`?",
+            "correct_answer": "Erwin Rommel",
+            "incorrect_answers": [
+                "Ernst Busch",
+                "Wolfram Freiherr von Richthofen",
+                "Wilhelm List"
+            ]
+        },
+        {
+            "id": "Q142",
+            "type": "multiple",
+            "question": "The idea of Socialism was articulated and advanced by whom?",
+            "correct_answer": "Karl Marx",
+            "incorrect_answers": [
+                "Vladimir Lenin",
+                "Joseph Stalin",
+                "Vladimir Putin"
+            ]
+        },
+        {
+            "id": "Q143",
+            "type": "boolean",
+            "question": "The United States Department of Homeland Security was formed in response to the September 11th attacks.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "id": "Q144",
+            "type": "multiple",
+            "question": "When did the Battle of the Somme begin?",
+            "correct_answer": "July 1st, 1916",
+            "incorrect_answers": [
+                "August 1st, 1916",
+                "July 2nd, 1916",
+                "June 30th, 1916"
+            ]
+        },
+        {
+            "id": "Q145",
+            "type": "boolean",
+            "question": "United States President John F. Kennedy was assassinated during his presidential motorcade in Atlanta, Georgia on November 22nd, 1963.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "id": "Q146",
+            "type": "boolean",
+            "question": "Adolf Hitler was a german soldier in World War I.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "id": "Q147",
+            "type": "boolean",
+            "question": "The United States of America declared their independence from the British Empire on July 4th, 1776.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "id": "Q148",
+            "type": "multiple",
+            "question": "What year did World War I begin?",
+            "correct_answer": "1914",
+            "incorrect_answers": [
+                "1905",
+                "1919",
+                "1925"
+            ]
+        },
+        {
+            "id": "Q149",
+            "type": "multiple",
+            "question": "How old was Adolf Hitler when he died?",
+            "correct_answer": "56",
+            "incorrect_answers": [
+                "43",
+                "65",
+                "47"
+            ]
+        },
+        {
+            "id": "Q150",
+            "type": "multiple",
+            "question": "Which modern country is known as &quot;The Graveyard of Empires&quot;?",
+            "correct_answer": "Afghanistan",
+            "incorrect_answers": [
+                "China",
+                "Iraq",
+                "Russia"
+            ]
+        }
+    ]
+}
