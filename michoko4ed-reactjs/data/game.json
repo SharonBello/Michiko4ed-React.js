@@ -1,0 +1,19 @@
+[
+    {
+        "_id": "G102",
+        "createdAt": {
+          "$numberLong": "1636410641000"
+        },
+        "user": {
+          "_id": "u103",
+          "fullName": "courtney lasch",
+          "ImgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655479271/users_profile/avatar-f99a5d03d32857b2b1e2c6f10c609e63_lcqowa.jpg"
+        },
+        "question": {
+          "_id": "L101",
+          "description": "Best VR game Ever!",
+          "title": "Science & Nature"
+        },
+        "status": "active"
+      }
+    ]

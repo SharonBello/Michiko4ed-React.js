@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Questions-list from './Questions-list';
+import QuestionsList from './questions-list.jsx';
 
-describe('<Questions-list />', () => {
+describe('<QuestionsList />', () => {
   test('it should mount', () => {
-    render(<Questions-list />);
+    render(<QuestionsList />);
     
-    const questionsList = screen.getByTestId('Questions-list');
+    const questionsList = screen.getByTestId('QuestionsList');
 
     expect(questionsList).toBeInTheDocument();
   });

@@ -50,7 +50,6 @@ async function query(filterBy = {}) {
 
 async function remove(questionId) {
     questionChannel.postMessage(getActionRemoveQuestion(questionId))
-
 }
 
 async function save(question) {

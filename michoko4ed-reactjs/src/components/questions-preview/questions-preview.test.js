@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Questions-preview from './Questions-preview';
+import QuestionsPreview from './questions-preview.jsx';
 
-describe('<Questions-preview />', () => {
+describe('<QuestionsPreview />', () => {
   test('it should mount', () => {
-    render(<Questions-preview />);
+    render(<QuestionsPreview />);
     
-    const questionsPreview = screen.getByTestId('Questions-preview');
+    const questionsPreview = screen.getByTestId('QuestionsPreview');
 
     expect(questionsPreview).toBeInTheDocument();
   });

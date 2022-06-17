@@ -1,15 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Add-question.module.scss';
+import React from 'react'
 
-const Add-question = () => (
-  <div className={styles.Add-question} data-testid="Add-question">
+export const AddQuestion = () => (
+  <div>
     Add-question Component
   </div>
-);
+)
 
-Add-question.propTypes = {};
-
-Add-question.defaultProps = {};
-
-export default Add-question;

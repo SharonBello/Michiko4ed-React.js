@@ -1,15 +1,15 @@
 import Axios from 'axios'
 import { httpService } from './http.service.js'
-import { gigService } from './gig.service.js'
+import { questionService } from './question.service.js'
 import { socketService } from './socket.service.js'
+import { utilService } from './util.service.js'
 
 const gameChannel = new BroadcastChannel('gameChannel')
 
-
 const BASE_URL =
     process.env.NODE_ENV === 'production'
-        ? '/api/gig/'
-        : 'http://localhost:3030/api/gig/'
+        ? '/api/question/'
+        : 'http://localhost:3030/api/question/'
 
 let axios = Axios.create({
     withCredentials: true,
@@ -23,19 +23,10 @@ export const gameService = {
 
 async function query(loggedUser, typeOf) {
     let games = await httpService.get('game')
-    let gigs = await gigService.query();
-    if (typeOf === 'getBuys') {
-        if (loggedUser.isSeller) {
+    if (typeOf === 'getGames') {
+        if (loggedUser) {
             games = games.filter(game => {
-                return game.buyer.fullName === loggedUser.userName
-            })
-        } else {
-            games = games.filter(game => game.buyer.fullName === loggedUser.userName)
-        }
-    } else {
-        if (loggedUser.isSeller) {
-            games = games.filter(game => {
-                return game.seller.fullName === loggedUser.userName
+                return game.user.fullName === loggedUser.fullName
             })
         } else {
             games = []
@@ -43,35 +34,29 @@ async function query(loggedUser, typeOf) {
     }
 
     games = games.map(game => {
-        return { ...game, gig: { ...game.gig, imgUrl: gigs.find(gig => gig._id === game.gig._id)?.imgUrl[0] } }
+        return { ...game, question: { ...game.question, imgUrl: questions.find(question => question._id === game.question._id)?.imgUrl[0] } }
     })
 
     games = games.sort((a, b) => b.createdAt - a.createdAt)
     return games
 }
 
-async function saveGame(gigId, loggedUser) {
+async function saveGame(questionId, loggedUser) {
     try {
-        let gig = await httpService.get(`gig/${gigId}`)
+        let question = await httpService.get(`question/${questionId}`)
         const game =
         {
+            _id: utilService.makeId(),
             createdAt: Date.now(),
-            deliveryDate: Date.now() + (gig.daysToMake * 86400000),
-            buyer: {
+            user: {
                 _id: loggedUser._id,
                 fullName: loggedUser.userName,
                 ImgUrl: loggedUser.imgUrl
             },
-            seller: {
-                _id: gig.owner._id,
-                fullName: gig.owner.fullName,
-                imgUrl: gig.owner.imgUrl
-            },
-            gig: {
-                _id: gigId,
-                description: gig.title,
-                price: gig.price,
-                category: gig.category
+            question: {
+                _id: questionId,
+                title: question.title,
+                description: question.description,
             },
             status: "pending"
         }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Add-question from './Add-question';
+import AddQuestion from './add-question.jsx';
 
 describe('<Add-question />', () => {
   test('it should mount', () => {
-    render(<Add-question />);
+    render(<AddQuestion />);
     
     const addQuestion = screen.getByTestId('Add-question');
 
