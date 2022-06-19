@@ -1,9 +1,9 @@
-import { HomePage } from './pages/homepage.jsx'
-import { GamePage } from './pages/game-page.jsx'
-import { GameDetails } from './pages/game-details.jsx'
-import { LoginSignup } from './pages/login-signup.jsx'
-import { AddGame } from './pages/add-game.jsx'
-import { UserProfile } from './pages/user-profile.jsx'
+import { HomePage } from './pages/homepage/homepage.jsx'
+import { GamePage } from './pages/game-page/game-page.jsx'
+import { GameDetails } from './pages/game-details/game-details.jsx'
+import { LoginSignup } from './pages/login/login-signup.jsx'
+import { AddGame } from './pages/add-game/add-game.jsx'
+import { UserProfile } from './pages//user-profile/user-profile.jsx'
 
 const routes = [
     {

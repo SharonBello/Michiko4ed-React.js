@@ -1,4 +1,4 @@
-import { LogoFullFooter, Copyright, LinkedIn } from '../services/svg.service.js'
+import { LogoFullFooter, Copyright, LinkedIn } from '../../services/svg.service.js'
 
 export const AppFooter = (props) => {
 

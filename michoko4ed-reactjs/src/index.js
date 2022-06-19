@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import {store} from './store/root.reducer.js'
 import {RootCmp} from './root-cmp'
-// import './assets/scss/main.scss'
+import './assets/scss/main.scss'
 
 
 const container = document.getElementById('root')

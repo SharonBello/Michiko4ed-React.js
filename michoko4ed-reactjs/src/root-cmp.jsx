@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router'
 import routes from './routes'
-import { AppFooter } from './components/app-footer.jsx'
-import { AppHeader } from './components/app-header.jsx'
+import { AppFooter } from './components/footer/app-footer.jsx'
+import { AppHeader } from './components/header/app-header.jsx'
 
 export class RootCmp extends React.Component {
 

@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
 import React, { useState, useEffect } from 'react';
-import { loadGames } from '../store/actions/game.actions.js';
-import { userService } from '../services/user.service.js';
-import { utilService } from '../services/util.service.js';
-import { Loader } from '../components/loader.jsx';
+import { loadGames } from '../../store/actions/game.actions.js';
+import { userService } from '../../services/user.service.js';
+import { utilService } from '../../services/util.service.js';
+import { Loader } from '../../components/loader/loader.jsx';
 
 export const UserProfile = () => {
     const [loggedUser, setLoggedUser] = useState(userService.getLoggedUser())

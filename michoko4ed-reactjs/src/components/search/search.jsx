@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { setFilter, loadQuestions } from '../store/actions/question.actions.js'
+import { setFilter, loadQuestions } from '../../store/actions/question.actions.js.js'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { AiOutlineSearch } from 'react-icons/ai'
@@ -8,7 +8,7 @@ export const Search = ({ loc }) => {
     const [searchTerm, setSearchTerm] = useState('')
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    let {    } = useSelector((storeState) => storeState.gigModule)
+    let { filterBy } = useSelector((storeState) => storeState.gigModule)
 
     const onSearch = (ev) => {
         ev.preventDefault()

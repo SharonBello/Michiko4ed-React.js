@@ -1,1 +1,28 @@
-.questions-list {}
+.questions-preview-main-wrapper {
+    width: 100%;
+
+    .list-of-questions-container {
+        position: relative;
+
+        .question-list {
+            color: $grey_1000;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 32px;
+            // min-height: 370px;
+            margin-top: rem(16px);
+            display: grid;
+            list-style: none;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .questions-preview-main-wrapper {
+        margin: 0 20px 0 10px;
+        
+    }
+
+    .question-list {
+        grid-template-columns: 400px;
+    }
+}

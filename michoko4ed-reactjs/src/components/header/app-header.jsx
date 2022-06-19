@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { LogoFull, HamburgerMenu, SearchBar } from '../services/svg.service.js'
+import { LogoFull, HamburgerMenu, SearchBar } from '../../services/svg.service.js'
 import { NavLink, useLocation, useSearchParams } from 'react-router-dom'
-import { Search } from './search.jsx'
-import { logout } from '../store/actions/user.actions.js'
+// import { Search } from './search.jsx'
+import { logout } from '../../store/actions/user.actions.js'
 import { useSelector, useDispatch } from 'react-redux'
-import { ProfileMenu } from './profile-menu.jsx'
-import { SideMenu } from './side-menu.jsx'
+import { ProfileMenu } from '../profile-menu/profile-menu.jsx'
+import { SideMenu } from '../side-menu/side-menu.jsx'
 
 export const AppHeader = (props) => {
     const { loggedUser } = useSelector((storeState) => storeState.userModule)
     const dispatch = useDispatch()
     const [profileMenu, setMenu] = useState(false)
     const [isSideMenu, setSideMenu] = useState(false)
-
-    const { pathname } = useLocation()
 
     const onLogout = () => {
         dispatch(logout())
@@ -36,7 +34,7 @@ export const AppHeader = (props) => {
     }
 
     return (
-        <header className="header">
+        <header className="header flex">
             <div className="top container">
                 <div className="logo-search-container">
                     <button onClick={onToggleSideMenu} className="hamburger-icon">

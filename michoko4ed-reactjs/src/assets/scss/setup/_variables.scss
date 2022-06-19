@@ -1,0 +1,48 @@
+
+$primary-background: #F2F2F2;
+$primary-navy: #1D1C40;
+$dark-navy: #151426;
+$accent1: #F22ED2;
+$accent2: #F26BDC;
+$accent3: #5CD7F2;
+$accent4: #05C7F2;
+$accent5: #03658C;
+$accent6: #049DD9;
+$accent7: #8303A6;
+$accent8: #DAC9F2;
+$accent9: #F077F2;
+
+
+$grey_1100: #404145;
+$grey_1000: #62646A;
+$grey_900: #74767E;
+$grey_800: #95979D;
+$grey_700: #B5B6BA;
+$grey_600: #C5C6C9;
+$grey_500: #DADBDD;
+$grey_400: #E4E5E7;
+$grey_300: #EFEFF0;
+$grey_200: #F5F5F5;
+$grey_100: #FAFAFA;
+$michiko_error: #F74040;
+$michiko_success: #19A463;
+$black: #000;
+$white: #fff;
+
+
+$mobile-viewport: 425px;
+$narrow-viewport: 744px;
+$normal-viewport: 1024px;
+$wide-viewport: 1440px;
+
+$fs-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
+$fs-600: 2rem;
+$fs-400: 1rem;
+
+
+@media (min-width: 40em) {
+:root {
+  $fs-600: 3rem;
+  $fs-400: 1.125rem;
+}
+}
