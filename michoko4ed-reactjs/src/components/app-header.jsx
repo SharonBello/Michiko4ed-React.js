@@ -48,7 +48,7 @@ export const AppHeader = (props) => {
                         </NavLink>
                     </div>
                     <form className="search-bar">
-                        <Search />
+                        {/* <Search /> */}
                     </form>
                 </div>
                 <ul className="nav-list clean-list" >

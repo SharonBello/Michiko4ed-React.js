@@ -8,7 +8,7 @@ export const Search = ({ loc }) => {
     const [searchTerm, setSearchTerm] = useState('')
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    let { filterBy } = useSelector((storeState) => storeState.gigModule)
+    let {    } = useSelector((storeState) => storeState.gigModule)
 
     const onSearch = (ev) => {
         ev.preventDefault()

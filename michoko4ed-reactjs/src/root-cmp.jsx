@@ -10,6 +10,7 @@ export class RootCmp extends React.Component {
         return (
             <section className="app-container">
                 <div className="app-header-container">
+                    <h1>Hi</h1>
                     <AppHeader />
                 </div>
                 <main className="routes-container">
