@@ -4,6 +4,7 @@
         "user_id": "U101",
         "title": "Science & Nature",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641000",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G101",
         "questions": [
@@ -122,6 +123,7 @@
         "user_id": "U103",
         "title": "Mythology",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641030",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G102",
         "questions": [
@@ -236,6 +238,7 @@
         "user_id": "U102",
         "title": "Trivia",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641020",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G103",
         "questions": [
@@ -352,6 +355,7 @@
         "user_id": "U101",
         "title": "Geography",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641040",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G101",
         "questions": [
@@ -466,6 +470,7 @@
         "user_id": "U104",
         "title": "History",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641050",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G105",
         "questions": [
@@ -578,6 +583,7 @@
         "user_id": "U104",
         "title": "Video Games",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641070",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G103",
         "questions": [
@@ -694,6 +700,7 @@
         "user_id": "U104",
         "title": "Board Games",
         "description": "Best VR game ever!",
+        "createdAt": "1636410641080",
         "imgUrl": "https://res.cloudinary.com/michiko/image/upload/v1655474894/Avatars_animals_kknifj.jpg",
         "game_id": "G102",
         "questions": [
