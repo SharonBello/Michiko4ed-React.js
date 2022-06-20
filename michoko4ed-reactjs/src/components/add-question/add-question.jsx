@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { saveQuestion } from '../../store/actions/question.actions.js'
+import { saveQuestion } from '../../store/actions/set.actions.js'
 import { cloudinaryService } from '../services/cloudinary.service.js'
 import { userService } from '../../services/user.service.js'
 

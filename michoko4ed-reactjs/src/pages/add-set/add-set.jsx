@@ -1,9 +1,9 @@
 import React from "react";
 
-export const GameDetails = () => {
+export const AddSet = () => {
     return (
         <>
-        Hello from game details
+        Hello from add game
         </>
     )
 }

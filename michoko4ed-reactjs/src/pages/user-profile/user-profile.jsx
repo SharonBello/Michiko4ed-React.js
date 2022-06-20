@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux'
-import React, { useState, useEffect } from 'react';
-import { loadGames } from '../../store/actions/game.actions.js';
-import { userService } from '../../services/user.service.js';
-import { utilService } from '../../services/util.service.js';
-import { Loader } from '../../components/loader/loader.jsx';
+import React, { useState, useEffect } from 'react'
+import { loadSets } from '../../store/actions/set.actions.js'
+import { userService } from '../../services/user.service.js'
+import { utilService } from '../../services/util.service.js'
+import { Loader } from '../../components/loader/loader.jsx'
 
 export const UserProfile = () => {
     const [loggedUser, setLoggedUser] = useState(userService.getLoggedUser())
     const user = useSelector((storeState) => storeState.userModule.loggedUser)
-    let { games } = useSelector((storeState) => storeState.gameModule)
+    let { sets } = useSelector((storeState) => storeState.setModule)
     const [loader, setLoader] = useState(true)
     const dispatch = useDispatch()
     const RED = '#F74040'
@@ -17,12 +17,12 @@ export const UserProfile = () => {
     const BLACK = '#404145'
 
     useEffect(() => {
-        dispatch(loadGames(loggedUser, 'getGames'))
+        dispatch(loadSets(loggedUser, 'getSets'))
         setTimeout(() => {
             setLoader(false)
         }, 3000)
 
-        games = games.filter(game => game.user !== loggedUser.userName)
+        sets = sets.filter(set => set.user_id !== loggedUser._id)
     }, [])
 
     return (
@@ -31,20 +31,18 @@ export const UserProfile = () => {
             <section className='user-profile flex'>
 
                 <div className='profile-right-container'>
-                    {(games.length) ?
+                    {(sets.length) ?
                         <div className='user-profile-card'>
-                            {games.map(game => <div className='game-card' key={game._id}><h4 className='game-desc-profile'>{game.question.description}</h4>
-                                <img className='question-img-profile' alt="" src={game.question.imgUrl} />
+                            {sets.map(set => <div className='set-card' key={set._id}><h4 className='set-desc-profile'>{set.description}</h4>
+                                <img className='set-img-profile' alt="" src={set.imgUrl} />
                                 <div className='card-profile-info'>
-                                    <h5>Seller: {game.user.fullName}</h5>
-                                    <h5>Status: <span style={{ color: `${game.status === 'inactive' ? RED : game.status === 'active' ? GREEN : game.status === 'onHold' ? BLACK : GRAY}` }}>{game.status}</span></h5>
-                                    <h5>Created Date: {utilService.setDateTime(game.createdAt)}</h5>
+                                    <h5>Status: <span style={{ color: `${set.status === 'inActive' ? RED : set.status === 'active' ? GREEN : set.status === 'pending' ? BLACK : GRAY}` }}>{set.status}</span></h5>
+                                    <h5>Created Date: {utilService.setDateTime(set.createdAt)}</h5>
                                 </div>
                             </div>)}
                         </div> :
-                        (<h1>You don't have Games yet!</h1>)}
+                        (<h1>You haven't created games yet!</h1>)}
                 </div>
-
             </section>
         </section>
     )

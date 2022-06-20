@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { useState } from 'react'
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import CssBaseline from '@mui/material/CssBaseline'
+import TextField from '@mui/material/TextField'
+import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { cloudinaryService } from '../../services/cloudinary.service.js';
-import { NavLink } from 'react-router-dom';
+import { cloudinaryService } from '../../services/cloudinary.service.js'
+import { NavLink } from 'react-router-dom'
 import { login, signup, getLoggedUser } from '../../store/actions/user.actions.js'
 
 const theme = createTheme();
@@ -23,7 +23,6 @@ export const LoginSignup = () => {
     const [isLogin, setIsLogin] = useState(true)
     const navigate = useNavigate()
     const dispatch = useDispatch()
-
 
     const uploadImg = (event) => {
         const CLOUD_NAME = cloudinaryService.getCloudName()

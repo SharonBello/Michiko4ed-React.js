@@ -1,105 +1,17 @@
 .header {
   width: 100%;
-  display: flex;
-  // flex-direction: column;
+  height: rem(600px);
   background-color: $primary-navy;
   position: fixed;
-  z-index: 1500;
-
-  &.nav-details {
-    position: static;
-    // border-bottom: 1px solid #dadbdd;
-    // border-top: 1px solid #dadbdd;
-  }
-
-  &.categories-header {
-    background-color: $white;
-
-    .top {
-      margin: 0;
-      background-color: $white;
-      -webkit-animation: fade-in 1.2s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
-      animation: fade-in 1.2s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
-    }
-
-    & a {
-      color: $grey_900;
-
-      &.seller-nav-link {
-        color: $accent4;
-        
-      }
-        &:hover {
-          color: $accent1;
-      }
-    }
-
-    .logo-search-container {
-      .logo {
-        svg {
-          path:nth-child(1) {
-            fill: $grey_1100;
-          }
-        }
-      }
-    }
-  }
-
-
-&.scrolled {
-  background-color: $white;
-
-  .nav-link {
-    color: $grey_900;
-
-    &.seller-nav-link {
-      color: $accent4;
-      
-    }
-      &:hover {
-        color: $accent1;
-    }
-  }
-
-  .top {
-    margin: 0;
-
-    & a {
-      color: $grey_900;
-
-      &.seller-nav-link {
-        color: $accent4;
-      }
-
-        &:hover {
-          color: $accent1;
-      }
-    }
-
-
-    .logo-search-container {
-      .logo {
-        svg {
-          path:nth-child(1) {
-            fill: $grey_1100;
-          }
-        }
-      }
-    }
-  }
-}
-}
-
-
-.top {
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: em(25px);
-  padding-bottom: em(25px);
 
+  .header-logo {
+    & img {
+      width: 150px;
+    }
+  }
   .logo-search-container {
-    display: flex;
     align-items: center;
 
     .hamburger-icon {
@@ -116,42 +28,15 @@
         color: $white;
       }
 
-      @include from-normal-layout {
-        display: none;
-      }
     }
 
-    .logo {
-      display: none;
-
-      svg {
-        path:first-child {
-          fill: $white;
-        }
-      }
-
-      @include from-mobile-layout {
-        display: block;
-      }
-    }
   }
-}
-
-.bottom {
-  display: flex;
-  align-items: center;
-  // border-top: 1px solid $grey_400;
-  // border-bottom: 1px solid $grey_400;
-  background-color: $white;
-  color: $grey_900;
 }
 
 ul {
   &.nav-list {
-    display: flex;
     align-items: center;
-    gap: 20px;
-    font-size: em(16px);
+    gap: rem(20px);
     font-weight: 600;
 
     .nav-link {
@@ -196,39 +81,4 @@ ul {
   background-color: $accent1;
 }
 
-.danger {
-  background-color: rgb(227, 114, 114);
-}
 
-@media (max-width:425px) {
-  .header {
-    background-color: #fff;
-  }
-
-  top {
-    .logo {
-      svg {
-        path:nth-child(1) {
-          fill: $grey_1000;
-        }
-      }
-    }
-  }
-}
-
- @-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import QuestionsPreview from './questions-preview.jsx';
+import QuestionsPreview from './sets-preview.jsx';
 
 describe('<QuestionsPreview />', () => {
   test('it should mount', () => {

@@ -22,27 +22,13 @@ export function getActionUpdateQuestion(question) {
     }
 }
 
-var subscriber
-
-export function searchQuestionByName() {
-    return async dispatch => {
-        try {
-            const questions = await questionService.getQuestionByName()
-            dispatch({
-                type: 'SET_QUESTION_NAME',
-                questions
-            })
-        } catch (err) {
-            console.error('Error:', err)
-        }
-    }
-}
+let subscriber
 
 export function loadQuestions() {
     return async (dispatch, getState) => {
         try {
-            const filterBy = getState().questionModule.filterBy
-            const questions = await questionService.query(filterBy)
+            const setId = getState().setModule.filterBy
+            const questions = await questionService.getAllQuestions(setId)
             const action = { type: 'SET_QUESTIONS', questions }
             dispatch(action)
         } catch (err) {
@@ -59,7 +45,7 @@ export function loadQuestions() {
 export function getById(questionId) {
     return async dispatch => {
         try {
-            const question = await questionService.getById(questionId)
+            const question = await questionService.getQuestionById(questionId)
             dispatch({
                 type: 'GET_BY_ID',
                 question
@@ -82,7 +68,7 @@ export function setFilter(filterBy) {
 export function removeQuestion(questionId) {
     return async dispatch => {
         try {
-            await questionService.remove(questionId)
+            await questionService.removeQuestion(questionId)
             dispatch(getActionRemoveQuestion(questionId))
             showSuccessMsg('Question removed Successfully!')
         } catch (err) {
@@ -98,10 +84,11 @@ export function removeQuestion(questionId) {
     }
 }
 
-export function updateQuestion(question) {
+export function updateQuestion(set, question) {
+    set = set._id
     return async dispatch => {
         try {
-            const savedQuestion = await questionService.save(question)
+            const savedQuestion = await questionService.saveQuestion(set, question)
 
             dispatch(getActionUpdateQuestion(question))
             // showSuccessMsg('Question saved Successfully!')
@@ -120,10 +107,11 @@ export function updateQuestion(question) {
 
 }
 
-export function saveQuestion(question) {
+export function saveQuestion(set, question) {
+    set = set._id
     return async dispatch => {
         try {
-            const savedQuestion = await questionService.save(question)
+            const savedQuestion = await questionService.saveQuestion(set, question)
             dispatch(getActionAddQuestion(savedQuestion))
             // showSuccessMsg('Question saved Successfully!')
         } catch (err) {
@@ -138,10 +126,11 @@ export function saveQuestion(question) {
     }
 }
 
-export function addQuestion(question) {
+export function addQuestion(set, question) {
+    set = set._id
     return async dispatch => {
         try {
-            const savedQuestion = await questionService.save(question)
+            const savedQuestion = await questionService.saveQuestion(set, question)
             dispatch(getActionAddQuestion(question))
             showSuccessMsg('Question added Successfully!')
         } catch (err) {

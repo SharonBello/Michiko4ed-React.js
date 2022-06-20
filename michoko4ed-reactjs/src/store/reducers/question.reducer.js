@@ -1,9 +1,5 @@
 const initialState = {   
     question: null,
-    filterBy: {
-        txt: '',
-        sortBy: 'title'
-    },
     questions: []
 }
 

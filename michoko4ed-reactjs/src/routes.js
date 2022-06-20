@@ -1,8 +1,8 @@
 import { HomePage } from './pages/homepage/homepage.jsx'
-import { GamePage } from './pages/game-page/game-page.jsx'
-import { GameDetails } from './pages/game-details/game-details.jsx'
+import { AppPage } from './pages/app-page/app-page.jsx'
+import { SetDetails } from './pages/set-details/set-details.jsx'
 import { LoginSignup } from './pages/login/login-signup.jsx'
-import { AddGame } from './pages/add-game/add-game.jsx'
+import { AddSet } from './pages/add-set/add-set.jsx'
 import { UserProfile } from './pages//user-profile/user-profile.jsx'
 
 const routes = [
@@ -23,16 +23,16 @@ const routes = [
         component: <LoginSignup />
     },
     {
-        path: '/add-game',
-        component: <AddGame />
+        path: '/add-set',
+        component: <AddSet />
     },
     {
-        path: '/game/:gameId',
-        component: <GameDetails />
+        path: '/set/:setId',
+        component: <SetDetails />
     },
     {
-        path: '/games',
-        component: <GamePage />
+        path: '/set',
+        component: <AppPage />
     },
     {
         path: '/',

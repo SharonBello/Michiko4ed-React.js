@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LogoFull, HamburgerMenu, SearchBar } from '../../services/svg.service.js'
 import { NavLink, useLocation, useSearchParams } from 'react-router-dom'
-// import { Search } from './search.jsx'
+import { Search } from '../search/search.jsx'
 import { logout } from '../../store/actions/user.actions.js'
 import { useSelector, useDispatch } from 'react-redux'
 import { ProfileMenu } from '../profile-menu/profile-menu.jsx'
@@ -34,24 +34,24 @@ export const AppHeader = (props) => {
     }
 
     return (
-        <header className="header flex">
-            <div className="top container">
-                <div className="logo-search-container">
+        <header className="header flex container">
+                <div className="logo-search-container flex">
                     <button onClick={onToggleSideMenu} className="hamburger-icon">
                         {isSideMenu && <SideMenu menuOpen={isSideMenu} closeMenu={onToggleSideMenu} user={loggedUser} />}
                     </button>
                     <div className="logo">
-                        <NavLink to="/" className="site-logo">
-                            <LogoFull />
+                        <NavLink to="/" className="header-logo">
+                            <img src={require('../../assets/logo/logo_header2.png')} alt="" />
+                            {/* <LogoFull/> */}
                         </NavLink>
                     </div>
                     <form className="search-bar">
-                        {/* <Search /> */}
+                        <Search />
                     </form>
                 </div>
-                <ul className="nav-list clean-list" >
+                <ul className="nav-list clean-list flex" >
                     <li>
-                        <NavLink to="/games" className="explore-nav-link nav-link">Games</NavLink>
+                        <NavLink to="/games" className="games-nav-link nav-link">Games</NavLink>
                     </li>
                     <li>
                         {!loggedUser && <NavLink to="/login" rel="nofollow" className="open-popup-login nav-link">Login/Join</NavLink>}
@@ -63,7 +63,6 @@ export const AppHeader = (props) => {
                         </div>
                     </li>
                 </ul>
-            </div>
         </header>
     )
 }

@@ -1,9 +1,9 @@
 import React from "react";
 
-export const GamePage = () => {
+export const SetDetails = () => {
     return (
         <>
-        Hello from game page
+        Hello from game details
         </>
     )
 }

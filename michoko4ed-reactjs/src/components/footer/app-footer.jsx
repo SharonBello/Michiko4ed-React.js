@@ -1,4 +1,4 @@
-import { LogoFullFooter, Copyright, LinkedIn } from '../../services/svg.service.js'
+import { LogoFull, Copyright, LinkedIn } from '../../services/svg.service.js'
 
 export const AppFooter = (props) => {
 
@@ -6,7 +6,7 @@ export const AppFooter = (props) => {
         <footer className="footer-bottom">
             <div className="footer-left flex">
                 <div className="footer-logo">
-                    <LogoFullFooter />
+                    <LogoFull />
                 </div>
                 <p className="legal-text flex">
                     <span className="copyright-icon">
@@ -16,7 +16,7 @@ export const AppFooter = (props) => {
                 </p>
 
             </div>
-            <ul className="social-container flex">
+            <ul className="social-container flex clean-list">
                 <li><LinkedIn /></li>
             </ul>
         </footer>

@@ -28,7 +28,6 @@ function getUsers() {
 }
 
 function onUserUpdate(user) {
-
     showSuccessMsg(`This user ${user.fullname} just got updated from socket, new score: ${user.score}`)
     store.dispatch({ type: 'SET_WATCHED_USER', user })
 }
